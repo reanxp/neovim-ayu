@@ -37,7 +37,7 @@ local function set_groups()
     CursorColumn = { bg = colors.line },
     CursorLine = { bg = colors.line },
     CursorLineNr = { fg = colors.accent, bg = colors.line },
-    LineNr = { fg = colors.guide_normal },
+    LineNr = { fg = colors.comment },
 
     Directory = { fg = colors.func },
     ErrorMsg = { fg = colors.error },
@@ -68,7 +68,7 @@ local function set_groups()
     TabLineFill = { fg = colors.fg, bg = colors.panel_border },
     TabLineSel = { fg = colors.fg, bg = colors.bg },
     Title = { fg = colors.keyword },
-    Visual = { bg = colors.selection_inactive },
+    Visual = { fg = colors.error, bg = colors.white },
     WarningMsg = { fg = colors.warning },
 
     Comment = { fg = colors.comment, italic = true },
@@ -257,7 +257,8 @@ local function set_groups()
     VM_Mono = { fg = colors.bg, bg = colors.comment },
   }
 
-  groups = vim.tbl_extend('force', groups, type(config.overrides) == 'function' and config.overrides() or config.overrides)
+  groups = vim.tbl_extend('force', groups,
+    type(config.overrides) == 'function' and config.overrides() or config.overrides)
 
   for group, parameters in pairs(groups) do
     vim.api.nvim_set_hl(0, group, parameters)
