@@ -32,7 +32,7 @@ local function set_groups()
     NormalFloat = { bg = colors.bg },
     FloatBorder = { fg = colors.comment },
     FloatTitle = { fg = colors.fg },
-    ColorColumn = { bg = colors.line },
+    ColorColumn = { bg = colors.column },
     Cursor = { fg = colors.bg, bg = colors.fg },
     CursorColumn = { bg = colors.line },
     CursorLine = { bg = colors.line },

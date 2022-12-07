@@ -1,6 +1,7 @@
 local colors = {
   white = '#FFFFFF',
   black = '#000000',
+  column = '#1C1C1C',
 }
 
 --- Generate colors based `vim.o.background` and a variant.
