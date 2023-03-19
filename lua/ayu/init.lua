@@ -124,9 +124,9 @@ local function set_groups()
     ['@type.qualifier'] = { fg = colors.keyword },
     ['@storageclass'] = { fg = colors.keyword },
     ['@tag'] = { fg = colors.keyword },
-    ['@tag.attribute'] = { fg = colors.tag },
+    ['@tag.attribute'] = { fg = colors.entity },
     ['@tag.delimiter'] = { link = 'Delimiter' },
-    ['@variable'] = { link = 'Normal' },
+    ['@variable'] = { fg = colors.fg },
 
     -- Gitsigns.
     GitSignsAddLn = { fg = colors.vcs_added },
@@ -170,6 +170,10 @@ local function set_groups()
     CursorWord = { bg = colors.selection_inactive },
     CursorWord0 = { bg = colors.selection_inactive },
     CursorWord1 = { bg = colors.selection_inactive },
+
+    -- Noice
+    NoiceLspProgressTitle = { fg = colors.fg },
+    NoiceLspProgressClient = { fg = colors.special },
 
     -- NvimTree.
     NvimTreeGitDirty = { fg = colors.accent },
